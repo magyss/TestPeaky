@@ -1,37 +1,48 @@
-Key Features
-Modular & Extensible Design: Built on abstract base classes and interfaces to support any type of selectable object.
-Data Lazy-Loading: Object data is loaded on demand, not stored in memory until the user accesses it.
-Input-Agnostic Architecture: Input system is completely decoupled from the data and selection logic. Supports both desktop and mobile input without relying on Unity's Input System.
-Dynamic UI Management: UI windows are loaded into memory only when needed. No preloaded UI elements on the Unity scene.
-Cross-Platform Support: The template is designed to work seamlessly across multiple platforms (desktop, mobile, etc.).
-No External Dependencies: Fully native Unity C# codebase. No use of third-party libraries such as Zenject, UniRx, or ECS.
-No Singletons: Follows clean architecture practices, avoiding singleton usage and repeated MonoBehaviour searches.
+# Unity Selectable Object Framework
 
-Included Examples
-1. Character Selection Example
-Displays a list of characters with:
-Name
-Level
-2D avatar image
-Selection can be made via UI (Canvas) or keyboard input.
+## 📌 Overview
 
-2. Location Selection Example
-Users can browse and select from available game locations.
-Each location includes:
-Name
-Description
-2D preview image
-Scene ID
+A reusable Unity template designed for selecting various types of objects (characters, inventory items, locations, etc.) across multiple projects. The architecture is built with **SOLID principles** and **object-oriented programming (OOP)**, ensuring high maintainability and reusability.
 
-Selecting a location triggers scene loading logic.
-Code Style & Guidelines
-All code follows the official C# Coding Conventions.
-Architecture emphasizes:
-Single Responsibility: Each class has one well-defined purpose.
-Open/Closed Principle: New object types can be added without modifying existing logic.
+---
 
-Liskov Substitution: Abstract classes and interfaces are used for safe extension.
+## ✅ Features
 
-Interface Segregation: Interfaces are small and purpose-specific.
+- 🔧 **Modular and Extensible** — Based on abstract classes and interfaces, easily extendable.
+- 💾 **Lazy Data Loading** — Object data is not loaded into memory until explicitly requested.
+- 🎮 **Input-Agnostic** — Works with both desktop and mobile platforms without relying on Unity’s Input System.
+- 🪄 **Dynamic UI Loading** — UI elements are instantiated only when needed. No preloaded UI objects in the scene.
+- 📱 **Cross-Platform Ready** — Designed to work on mobile, desktop, and other Unity-supported platforms.
+- 📦 **Zero Dependencies** — No Zenject, UniRx, ECS, or similar frameworks.
+- 🚫 **No Singletons or FindObjectOfType** — Clean dependency management without global access or performance-costly operations.
 
-Dependency Inversion: High-level modules depend on abstractions, not concrete implementations.
+---
+
+## 🧩 Included Examples
+
+### 🧍 Character Selection
+- Displays:
+  - Name
+  - Level
+  - 2D Avatar
+- Selection via:
+  - UI (Canvas)
+  - Keyboard input
+
+### 🌍 Location Selection
+- Displays:
+  - Location Name
+  - Description
+  - 2D Preview Image
+  - Scene ID
+- Loads the selected scene upon user selection
+
+---
+
+## 🧠 Architecture Principles
+
+- **Single Responsibility Principle** – Each class has one clear purpose.
+- **Open/Closed Principle** – Easy to extend, no need to modify core logic.
+- **Liskov Substitution Principle** – Safe interface and class replacements.
+- **Interface Segregation Principle** – Small, focused interfaces.
+- **Dependency Inversion Principle** – High-level modules depend on abstractions.
